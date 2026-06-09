@@ -39,7 +39,7 @@
     var h = Math.ceil(r.height) + pad * 2;
     if (w === lastW && h === lastH) return;
     var firstTime = (lastH === 0);
-    var oldH = lastH;
+    var oldW = lastW, oldH = lastH;
     lastW = w; lastH = h;
 
     // Screen work area + this window's size, in PHYSICAL px (outerPosition and
@@ -62,14 +62,17 @@
       }).catch(function () {});
       return;
     }
-    // afterward: keep the bottom-left corner where the user left it so the bar
-    // grows from the orb, but CLAMP the whole window inside the screen so it can
-    // never open clipped off the top or the right edge.
+    // afterward: keep the window's CENTER fixed across the resize, so the bar
+    // opens exactly where the orb sat (and grows/shrinks in place) instead of
+    // drifting toward a corner. Clamp to the work area so an orb near an edge is
+    // nudged fully on-screen, but it's never relocated otherwise.
     appWindow.outerPosition().then(function (pos) {
+      var cx = pos.x + (oldW * sf) / 2;   // physical center of the OLD window
+      var cy = pos.y + (oldH * sf) / 2;
       return appWindow.setSize(new LogicalSize(w, h)).then(function () {
-        var nx = clamp(pos.x, areaL, areaR - pw);
-        var ny = clamp(Math.round(pos.y + (oldH - h) * sf), areaT, areaB - ph);
-        return appWindow.setPosition(new PhysicalPosition(Math.round(nx), ny));
+        var nx = clamp(Math.round(cx - pw / 2), areaL, areaR - pw);
+        var ny = clamp(Math.round(cy - ph / 2), areaT, areaB - ph);
+        return appWindow.setPosition(new PhysicalPosition(nx, ny));
       });
     }).catch(function () {
       appWindow.setSize(new LogicalSize(w, h)).catch(function () {});
