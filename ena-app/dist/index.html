@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>ENA - floating prompt enhancer</title>
+<link rel="stylesheet" href="styles.css" />
+<style>
+  /* Floating Mac window: transparent surface, the bar floats centered.
+     No fake desktop chrome - the real macOS desktop shows through. */
+  html, body {
+    margin: 0;
+    height: 100%;
+    background: transparent;
+    overflow: hidden;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+  #root {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .ena-app { display: flex; align-items: center; justify-content: center; }
+  /* the input itself must stay selectable / editable */
+  .bar__input { -webkit-user-select: text; user-select: text; }
+</style>
+</head>
+<body>
+<div id="root"></div>
+
+<!-- Vendored locally so ENA runs fully offline -->
+<script src="vendor/react.production.min.js"></script>
+<script src="vendor/react-dom.production.min.js"></script>
+
+<!-- Design-handoff sources, precompiled JSX -> JS (build-jsx.js). Order matters:
+     enhance.js (window.HONE) → bar.js (exports icons/FloatingBar on window)
+     → onboarding.js (uses those) → app.js (composes the app). -->
+<script src="enhance.js"></script>
+<script src="build/bar.js"></script>
+<script src="build/onboarding.js"></script>
+<script src="build/app.js"></script>
+
+<!-- Window auto-fit (Tauri only; no-op in a plain browser) -->
+<script src="resize.js"></script>
+</body>
+</html>
