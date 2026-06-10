@@ -20,9 +20,9 @@ Type a rough idea. ENA sharpens it into a precise, **codebase-aware** prompt - w
 
 ---
 
-## 🎬 Demo
+## Demo
 
-[▶ Watch the 30-second demo](media/ena-demo.mp4) — type a rough idea, ENA enhances it against your codebase, then flip between Concise · Balanced · Detailed. *(10 MB, 1080p)*
+[▶ Watch the 30-second demo](https://pub-d50b64b3cf024fb99056d2fda492c991.r2.dev/ena-demo.mp4) — type a rough idea, ENA enhances it, then flip between Concise · Balanced · Detailed.
 
 ---
 
@@ -36,24 +36,24 @@ It's the layer between *"fix the login thing"* and a prompt your coding agent ca
 
 ---
 
-## ✨ Features
+## Features
 
 | | |
 |---|---|
-| 🔮 **Orb-first** | Lives as a draggable orb; click or `⌥Space` to summon. Closes back to the orb - never quits. |
-| 🧠 **Real codebase index** | The agent (Claude or Codex) actually reads your repo and writes the summary - not a mechanical scan. |
-| ✂️ **3 variations** | Every enhance returns Concise · Balanced · Detailed. Edit in place, diff against your draft. |
-| 🤝 **Claude **or** Codex** | Rides your existing `claude` / `codex` CLI login. No API key required. |
-| 🖼️ **Vision** | Attach images or drag from Finder - both Claude and Codex *see* them. |
-| 📝 **Custom instructions** | Tell ENA how you like prompts written; applied to every enhance. |
-| 🎨 **Themes** | Light / Dark / Auto + an accent picker. |
-| ⌨️ **Rebindable hotkey** | Summon ENA with any global shortcut you choose. |
-| 🏆 **Stats & levels** | Streaks, ranks, a gold award ladder, an activity heatmap, and a shareable card. |
-| 🔒 **On-device** | Index summaries and settings never leave your Mac. |
+| **Orb-first** | Lives as a draggable orb; click or `⌥Space` to summon. Closes back to the orb - never quits. |
+| **Real codebase index** | The agent (Claude or Codex) actually reads your repo and writes the summary - not a mechanical scan. |
+| **3 variations** | Every enhance returns Concise · Balanced · Detailed. Edit in place, diff against your draft. |
+| **Claude **or** Codex** | Rides your existing `claude` / `codex` CLI login. No API key required. |
+| **Vision** | Attach images or drag from Finder - both Claude and Codex *see* them. |
+| **Custom instructions** | Tell ENA how you like prompts written; applied to every enhance. |
+| **Themes** | Light / Dark / Auto + an accent picker. |
+| **Rebindable hotkey** | Summon ENA with any global shortcut you choose. |
+| **Stats & levels** | Streaks, ranks, a gold award ladder, an activity heatmap, and a shareable card. |
+| **On-device** | Index summaries and settings never leave your Mac. |
 
 ---
 
-## 🏆 Earn your rank
+## Earn your rank
 
 Every prompt you sharpen levels you up - twelve gold ranks from **Scribbler** to **Prompt Legend**, with streaks, an activity heatmap, and a share card you can post.
 
@@ -63,7 +63,7 @@ Every prompt you sharpen levels you up - twelve gold ranks from **Scribbler** to
 
 ---
 
-## 🚀 Getting started
+## Getting started
 
 ### Prerequisites
 - **macOS 12+**
@@ -92,7 +92,7 @@ ENA walks you through it: set your hotkey, point it at a project (the agent inde
 
 ---
 
-## ⌨️ Usage
+## Usage
 
 | Action | How |
 |---|---|
@@ -106,7 +106,7 @@ ENA walks you through it: set your hotkey, point it at a project (the agent inde
 
 ---
 
-## 🔒 Privacy
+## Privacy
 
 ENA is local-first by design:
 
@@ -118,7 +118,7 @@ Need a clean slate? **Settings → Index cache → Clear**.
 
 ---
 
-## 🧩 How it works
+## How it works
 
 ```
   rough prompt ──▶ ENA bar
@@ -137,7 +137,7 @@ Need a clean slate? **Settings → Index cache → Clear**.
 
 ---
 
-## 🛠️ Architecture
+## Architecture
 
 ```
 ena-app/
@@ -160,7 +160,7 @@ ena-app/
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 PRs welcome. Keep ENA's spirit: **clean, intentional, no clutter.** Edit `.jsx`, run `node build-jsx.js`, then `cargo tauri dev`.
 
@@ -168,6 +168,5 @@ PRs welcome. Keep ENA's spirit: **clean, intentional, no clutter.** Edit `.jsx`,
 
 ## License
 
-[MIT](LICENSE) © 2026 Femi
+[MIT](LICENSE) © 2026 ceorkm
 
-<div align="center"><br/>Made with care, one orb at a time. 🔵</div>

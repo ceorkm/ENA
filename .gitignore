@@ -47,3 +47,4 @@ ena-app/src-tauri/gen/
 
 # Landing site kept out of the app repo
 landing/
+media/
