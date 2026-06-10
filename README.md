@@ -24,8 +24,6 @@ Type a rough idea. ENA sharpens it into a precise, **codebase-aware** prompt - w
 
 <img src=".github/ena-demo.gif" alt="ENA demo: type a rough idea, ENA enhances it, flip between Concise, Balanced and Detailed" width="100%" />
 
-[▶ Watch in full quality](https://pub-d50b64b3cf024fb99056d2fda492c991.r2.dev/ena-demo.mp4)
-
 ---
 
 ## What is ENA?
@@ -171,4 +169,3 @@ PRs welcome. Keep ENA's spirit: **clean, intentional, no clutter.** Edit `.jsx`,
 ## License
 
 [MIT](LICENSE) © 2026 ceorkm
-
