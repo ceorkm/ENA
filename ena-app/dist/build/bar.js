@@ -1875,6 +1875,18 @@ function FloatingBar({
   const isWorking = ["resting", "typing", "enhancing", "result", "variations", "diff"].includes(view);
   const showCtx = isWorking && view !== "enhancing";
   const placeholder = project ? "Describe a change to " + project.name + "\u2026" : "Describe what you want\u2026";
+
+  /* grow the input down by at most one extra line (2 max), then scroll
+     inside — the bar stays compact no matter how long the paste is.
+     Clamp to one line minimum: scrollHeight reads 0 while the bar is
+     display:none (collapsed to the orb), which would zero the field. */
+  function fitInput() {
+    const el = inputRef.current;
+    if (!el) return;
+    el.style.height = "auto";
+    el.style.height = Math.max(30, Math.min(el.scrollHeight, 60)) + "px";
+  }
+  useEffect(fitInput, [draft, view]);
   return /*#__PURE__*/React.createElement("div", {
     className: "bar bar--" + variant + (view !== "resting" && view !== "typing" ? " is-expanded" : "")
   }, /*#__PURE__*/React.createElement("div", {
@@ -1887,13 +1899,16 @@ function FloatingBar({
     src: "ena-orb.png",
     alt: "ENA",
     draggable: false
-  })), /*#__PURE__*/React.createElement("input", {
+  })), /*#__PURE__*/React.createElement("textarea", {
     ref: inputRef,
     className: "bar__input",
+    rows: 1,
+    wrap: "soft",
     value: draft,
     placeholder: placeholder,
     onChange: onInput,
     onKeyDown: onKey,
+    onFocus: fitInput,
     spellCheck: false
   }), /*#__PURE__*/React.createElement("div", {
     className: "bar__right"

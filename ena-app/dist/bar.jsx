@@ -767,12 +767,24 @@ function FloatingBar({ variant = "native", initialView = "resting", initialStyle
   const showCtx = isWorking && view !== "enhancing";
   const placeholder = project ? "Describe a change to " + project.name + "\u2026" : "Describe what you want\u2026";
 
+  /* grow the input down by at most one extra line (2 max), then scroll
+     inside — the bar stays compact no matter how long the paste is.
+     Clamp to one line minimum: scrollHeight reads 0 while the bar is
+     display:none (collapsed to the orb), which would zero the field. */
+  function fitInput() {
+    const el = inputRef.current;
+    if (!el) return;
+    el.style.height = "auto";
+    el.style.height = Math.max(30, Math.min(el.scrollHeight, 60)) + "px";
+  }
+  useEffect(fitInput, [draft, view]);
+
   return (
     <div className={"bar bar--" + variant + (view !== "resting" && view !== "typing" ? " is-expanded" : "")}>
       {/* input row */}
       <div className="bar__row">
         <span className="bar__mark"><img ref={orbRef} className="bar__orb" src="ena-orb.png" alt="ENA" draggable={false} /></span>
-        <input ref={inputRef} className="bar__input" value={draft} placeholder={placeholder} onChange={onInput} onKeyDown={onKey} spellCheck={false} />
+        <textarea ref={inputRef} className="bar__input" rows={1} wrap="soft" value={draft} placeholder={placeholder} onChange={onInput} onKeyDown={onKey} onFocus={fitInput} spellCheck={false} />
         <div className="bar__right">
           <button className="bar__attach" onClick={attachImages} title="Attach images"><IconClip /></button>
           <ProviderMenu value={provider} onChange={setProviderPersist} />
