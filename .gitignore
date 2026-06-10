@@ -27,9 +27,18 @@ yarn-error.log*
 *.log
 *.tmp
 
-# ── Loose captures & exports (keep the repo clean) ─────
+# ── Root-level scratch: previews, captures, exports ────
+# Real pages live in landing/; real assets live in media/ or ena-app/.
+# Anything loose at the repo root is scratch and stays out of git.
+/*.html
+/*.png
+/*.jpeg
+/*.zip
+/*.mp4
+/*.mov
+/*.gif
 Screenshot*.png
-*.jpeg
+Cap *.mp4
 
 # ── Build artifacts produced by your machine ───────────
 ena-app/src-tauri/gen/

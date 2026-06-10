@@ -20,6 +20,12 @@ Type a rough idea. ENA sharpens it into a precise, **codebase-aware** prompt - w
 
 ---
 
+## 🎬 Demo
+
+[▶ Watch the 30-second demo](media/ena-demo.mp4) — type a rough idea, ENA enhances it against your codebase, then flip between Concise · Balanced · Detailed. *(10 MB, 1080p)*
+
+---
+
 ## What is ENA?
 
 ENA rests as a small **orb** on your screen. Tap it (or hit `⌥Space` from any app) and a clean command bar floats on top. Write what you want in plain words, press `↩`, and ENA returns **three sharpened prompts** - Concise, Balanced, and Detailed - grounded in your actual project. Pick one, and ENA pastes it straight into the app you were already in.
