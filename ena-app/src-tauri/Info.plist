@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<!-- Declare ENA an agent (menu-bar utility, no Dock icon) from launch, so the
+	     bundle identity matches the runtime Accessory activation policy. Without
+	     this, the bundle launches as a regular app then demotes itself, and the
+	     window server refuses to composite its windows (onscreen=false). -->
+	<key>LSUIElement</key>
+	<true/>
+</dict>
+</plist>

@@ -1,0 +1,135 @@
+{
+  "palette": {
+    "core": "#E0A93B",
+    "shadow": "#B57E1E",
+    "highlight": "#FBE39A"
+  },
+  "canvas": "240x240",
+  "exports": [
+    96,
+    192,
+    288
+  ],
+  "ranks": [
+    {
+      "level": 1,
+      "name": "Scribbler",
+      "svg": "award-01-scribbler.svg",
+      "png": [
+        "award-01-scribbler-96.png",
+        "award-01-scribbler-192.png",
+        "award-01-scribbler-288.png"
+      ]
+    },
+    {
+      "level": 2,
+      "name": "Drafter",
+      "svg": "award-02-drafter.svg",
+      "png": [
+        "award-02-drafter-96.png",
+        "award-02-drafter-192.png",
+        "award-02-drafter-288.png"
+      ]
+    },
+    {
+      "level": 3,
+      "name": "Wordsmith",
+      "svg": "award-03-wordsmith.svg",
+      "png": [
+        "award-03-wordsmith-96.png",
+        "award-03-wordsmith-192.png",
+        "award-03-wordsmith-288.png"
+      ]
+    },
+    {
+      "level": 4,
+      "name": "Prompt Apprentice",
+      "svg": "award-04-prompt-apprentice.svg",
+      "png": [
+        "award-04-prompt-apprentice-96.png",
+        "award-04-prompt-apprentice-192.png",
+        "award-04-prompt-apprentice-288.png"
+      ]
+    },
+    {
+      "level": 5,
+      "name": "Prompt Crafter",
+      "svg": "award-05-prompt-crafter.svg",
+      "png": [
+        "award-05-prompt-crafter-96.png",
+        "award-05-prompt-crafter-192.png",
+        "award-05-prompt-crafter-288.png"
+      ]
+    },
+    {
+      "level": 6,
+      "name": "Prompt Artisan",
+      "svg": "award-06-prompt-artisan.svg",
+      "png": [
+        "award-06-prompt-artisan-96.png",
+        "award-06-prompt-artisan-192.png",
+        "award-06-prompt-artisan-288.png"
+      ]
+    },
+    {
+      "level": 7,
+      "name": "Prompt Sage",
+      "svg": "award-07-prompt-sage.svg",
+      "png": [
+        "award-07-prompt-sage-96.png",
+        "award-07-prompt-sage-192.png",
+        "award-07-prompt-sage-288.png"
+      ]
+    },
+    {
+      "level": 8,
+      "name": "Prompt Smith",
+      "svg": "award-08-prompt-smith.svg",
+      "png": [
+        "award-08-prompt-smith-96.png",
+        "award-08-prompt-smith-192.png",
+        "award-08-prompt-smith-288.png"
+      ]
+    },
+    {
+      "level": 9,
+      "name": "Prompt Master",
+      "svg": "award-09-prompt-master.svg",
+      "png": [
+        "award-09-prompt-master-96.png",
+        "award-09-prompt-master-192.png",
+        "award-09-prompt-master-288.png"
+      ]
+    },
+    {
+      "level": 10,
+      "name": "Prompt Architect",
+      "svg": "award-10-prompt-architect.svg",
+      "png": [
+        "award-10-prompt-architect-96.png",
+        "award-10-prompt-architect-192.png",
+        "award-10-prompt-architect-288.png"
+      ]
+    },
+    {
+      "level": 11,
+      "name": "Prompt Virtuoso",
+      "svg": "award-11-prompt-virtuoso.svg",
+      "png": [
+        "award-11-prompt-virtuoso-96.png",
+        "award-11-prompt-virtuoso-192.png",
+        "award-11-prompt-virtuoso-288.png"
+      ]
+    },
+    {
+      "level": 12,
+      "name": "Prompt Legend",
+      "svg": "award-12-prompt-legend.svg",
+      "png": [
+        "award-12-prompt-legend-96.png",
+        "award-12-prompt-legend-192.png",
+        "award-12-prompt-legend-288.png"
+      ]
+    }
+  ]
+}
