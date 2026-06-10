@@ -103,32 +103,25 @@ function AppRoot() {
     setOnboarded(true);
   }
 
-  // ⌥Space (global hotkey) → Rust emits "ena-toggle". Behavior depends on the
-  // orb setting: collapse to orb, or hide the whole window.
+  // ⌥Space (global hotkey) → Rust emits "ena-toggle". It hides/shows the whole
+  // window (orb and all) — it never expands the bar. Opening is the orb's job.
+  // Whatever was on screen (orb or open bar) comes back exactly as it was.
   useEffectApp(() => {
     const t = window.__TAURI__;
     if (!t || !t.event || !t.event.listen) return;
     let un;
     t.event.listen("ena-toggle", () => {
       const aw = appWin();
-      if (orbModeRef.current) {
-        if (aw) {
-          Promise.resolve(aw.show()).catch(() => {});
-          if (aw.setFocus) Promise.resolve(aw.setFocus()).catch(() => {});
+      if (!aw || !aw.isVisible) return;
+      aw.isVisible().then(v => {
+        if (v) {
+          aw.hide();
+        } else {
+          aw.show();
+          aw.setFocus && aw.setFocus();
+          HONE.refloat && HONE.refloat();
         }
-        setCollapsed(c => !c);
-        HONE.refloat && HONE.refloat();
-      } else if (aw && aw.isVisible) {
-        aw.isVisible().then(v => {
-          if (v) {
-            aw.hide();
-          } else {
-            aw.show();
-            aw.setFocus && aw.setFocus();
-            HONE.refloat && HONE.refloat();
-          }
-        }).catch(() => {});
-      }
+      }).catch(() => {});
     }).then(f => {
       un = f;
     }).catch(() => {});
