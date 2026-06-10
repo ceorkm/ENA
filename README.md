@@ -22,7 +22,9 @@ Type a rough idea. ENA sharpens it into a precise, **codebase-aware** prompt - w
 
 ## Demo
 
-[▶ Watch the 30-second demo](https://pub-d50b64b3cf024fb99056d2fda492c991.r2.dev/ena-demo.mp4) — type a rough idea, ENA enhances it, then flip between Concise · Balanced · Detailed.
+<img src=".github/ena-demo.gif" alt="ENA demo: type a rough idea, ENA enhances it, flip between Concise, Balanced and Detailed" width="100%" />
+
+[▶ Watch in full quality](https://pub-d50b64b3cf024fb99056d2fda492c991.r2.dev/ena-demo.mp4)
 
 ---
 
