@@ -44,3 +44,6 @@ Cap *.mp4
 ena-app/src-tauri/gen/
 *.app
 *.dmg
+
+# Landing site kept out of the app repo
+landing/
